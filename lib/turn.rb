@@ -15,7 +15,7 @@ def position_taken?(board,index)
     true
 end
 end
-# code y #valid_move? method here
+
 def valid_move?(board,index)
   if !position_taken?(board,index) && index.between?(0,8)
       true
@@ -23,3 +23,13 @@ def valid_move?(board,index)
       false
   end
 end
+
+def input_to_index(user_input)
+  user_input.to_i - 1
+end
+
+def move (board,index,value = "X")
+  board[index] = value
+end
+
+def turn
